@@ -31,15 +31,15 @@ app.get('/repositories', (request, response) => {
 app.post('/repositories', (request, response) => {
     const { title, url, techs } = request.body;
 
-    const repositoryAlreadyExists = repositories.find(
-        (repository) => repository.title === title,
-    );
+    // const repositoryAlreadyExists = repositories.find(
+    //     (repository) => repository.title === title,
+    // );
 
-    if (repositoryAlreadyExists) {
-        return response
-            .status(404)
-            .json({ error: 'Repository already exist!' });
-    }
+    // if (repositoryAlreadyExists) {
+    //     return response
+    //         .status(404)
+    //         .json({ error: 'Repository already exist!' });
+    // }
 
     const newRepository = {
         id: uuid(),
